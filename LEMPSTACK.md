@@ -64,7 +64,7 @@ sudo mysql -p
 ```bash
 sudo apt install php-fpm php-mysql
 ```
-**Screenshot:** ![PHP Installation]https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot6.PNG)
+**Screenshot:** ![PHP Installation](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot6.PNG)
 
 ---
 
@@ -193,8 +193,9 @@ You can then access `http://<Your-EC2-Public-IP>/todo_list.php` in your browser 
 ## 11. Final Testing
 Access `http://<Your-EC2-Public-IP>/todo_list.php` to view the data retrieved from the MySQL database.
 
+```
 **Screenshot:** ![Final Output](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot11.PNG)
-
+```
 ---
 
 Congratulations!
