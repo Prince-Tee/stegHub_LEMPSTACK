@@ -1,4 +1,4 @@
-#**Deploying a LEMP Stack on AWS EC2: A Step-by-Step Guide**
+**Deploying a LEMP Stack on AWS EC2: A Step-by-Step Guide**
 ---
 
 ## 1. Connecting to EC2 Instance
@@ -6,7 +6,7 @@ Launch Git Bash and run the following command:
 ```bash
 ssh -i <Your-private-key.pem> ubuntu@<EC2-Public-IP-address>
 ```
-**Screenshot:** ![Connecting to EC2](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot1.PNG)
+**Screenshot:** ![Connecting to EC2](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot1.PNG)
 
 ---
 
@@ -18,7 +18,7 @@ sudo systemctl status nginx
 ```
 Open TCP port 80 in EC2 Security Group settings to allow web traffic.
 
-**Screenshot:** ![Nginx Installation](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot2.PNG)
+**Screenshot:** ![Nginx Installation](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot2.PNG)
 
 ---
 
@@ -30,7 +30,7 @@ curl http://127.0.0.1:80
 ```
 Visit `http://<Public-IP-Address>:80` to verify.
 
-**Screenshot:** ![Nginx Web Page](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot3.PNG)
+**Screenshot:** ![Nginx Web Page](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot3.PNG)
 
 ---
 
@@ -43,7 +43,7 @@ Run the following command to set the root password:
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
 ```
-**Screenshot:** ![MySQL Installation](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot4.PNG)
+**Screenshot:** ![MySQL Installation](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot4.PNG)
 
 ---
 
@@ -56,7 +56,7 @@ Log in to test:
 ```bash
 sudo mysql -p
 ```
-**Screenshot:** ![MySQL Secure Installation](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot5.PNG)
+**Screenshot:** ![MySQL Secure Installation](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot5.PNG)
 
 ---
 
@@ -64,7 +64,7 @@ sudo mysql -p
 ```bash
 sudo apt install php-fpm php-mysql
 ```
-**Screenshot:** ![PHP Installation](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot6.PNG)
+**Screenshot:** ![PHP Installation](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot6.PNG)
 
 ---
 
@@ -108,12 +108,12 @@ sudo nginx -t
 sudo unlink /etc/nginx/sites-enabled/default
 sudo systemctl reload nginx
 ```
-**Screenshot:** ![Nginx Configuration](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot7.PNG)
+**Screenshot:** ![Nginx Configuration](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot7.PNG)
 
-![Nginx Configuration](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot7a.PNG)
+![Nginx Configuration](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot7a.PNG)
 
-![Nginx Configuration](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot7b.PNG)
----
+![Nginx Configuration](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot7b.PNG)
+
 
 ## 8. Testing PHP with Nginx
 Create a PHP info file:
@@ -128,7 +128,7 @@ phpinfo();
 ```
 Access `http://<Public-IP-Address>/info.php` in your browser.
 
-**Screenshot:** ![PHP Info Page](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot8.PNG)
+**Screenshot:** ![PHP Info Page](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot8.PNG)
 
 ---
 
@@ -155,7 +155,7 @@ Insert data into the table:
 INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
 INSERT INTO example_database.todo_list (content) VALUES ("My second important item");
 ```
-**Screenshot:** ![MySQL Database Setup](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot9.PNG)
+**Screenshot:** ![MySQL Database Setup](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot9.PNG)
 
 ---
 
@@ -186,17 +186,20 @@ try {
 }
 ?>
 ```
-**Screenshot:** ![todo_list.php Creation](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot9.PNG)
+**Screenshot:** ![todo_list.php Creation](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot9.PNG)
 ```
 
 You can then access `http://<Your-EC2-Public-IP>/todo_list.php` in your browser to verify the display of your "TODO" list.
 ## 11. Final Testing
 Access `http://<Your-EC2-Public-IP>/todo_list.php` to view the data retrieved from the MySQL database.
+---
+
 
 ```
-**Screenshot:** ![Final Output](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshot11.PNG)
+**Screenshot:** ![Final Output](https://github.com/Prince-Tee/stegHub_LEMPSTACK/blob/main/screenshots%20from%20my%20local%20env/screenshot11.PNG)
 ```
----
+
+
 
 Congratulations!
 In this guide , we have built a flexible foundation for serving PHP websites and applications to your visitors, using Nginx as web server and MySQL as database management system.
